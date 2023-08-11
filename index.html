@@ -9,10 +9,19 @@
         width: 30px;
         height: 50px;
        }
+       img {
+       width: 100px;
+       }
        body{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+       }
+       p{
+        font-size: 16px;
+       }
+       h1 ,h2 ,h3{
+        font-size: 24px;
        }
        header{
         width: 100%;
@@ -76,6 +85,282 @@
        .section1-imgs {
         margin-top: 70px;
         width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows:1fr;
+        gap: 10px;
+    }
+       .section1-imgs img:first-child {
+        width: 100%;
+        object-fit: cover;
+        margin-top: 50px;
+        height: 265px;
+        align-self: center;
+       }
+       .section1-imgs img:nth-of-type(2),.section1-imgs img:last-child{
+        width: 100%;
+        object-fit: cover;
+        height: 186px;
+       }
+       .section1-imgs img:last-child{
+        grid-column: 2 / -1;
+        margin-top: -130px;
+       }
+       .section2 {
+        width: 100%;
+        margin-top: 20px;
+        background-color: #E74C3C;
+        color:#ffffff;
+      
+       }
+       .section2 article{
+        width: 90%;
+        height: 150px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+       }
+       .section2 article div:nth-of-type(3){
+           margin-top: 15px;
+       }
+       .section2 article div:nth-of-type(2){
+          align-self: flex-end;        
+       }
+       .section3{
+        margin-top: 70px;
+        width: 100%;
+        text-align: center;
+       }
+       .section3 h1 {
+        text-align: center;
+       }
+       .section3 article{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+       }
+       .section3 article div {
+        background-color: #F0F0F0;
+        width: 50%;
+        height: 38px;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px 25px;
+       }
+       .section4 {
+        margin-top: 90px;
+       }
+       .section4 img {
+        width: 50vh;
+        object-fit: cover;
+       }
+       .section4 .section4-content{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+       }
+       .section4 .section4-content h2{
+        font-size: 24px;
+       }
+       .section4 .section4-content p {
+        font-size: 16px;
+        width: 95%;
+        text-align: center;
+        margin: 40px auto;
+       }
+       .section4 .section4-content span{
+        color: #E74C3C;
+       }
+       .section4 div:nth-last-of-type(2), .section4 div:nth-last-of-type(3), .section4 div:nth-last-of-type(4), .section4 div:nth-last-of-type(5){
+        width: 100%;
+        margin: -10px 0px;
+       }
+       .section4 :nth-last-of-type(3) {
+        height: 300px;
+        margin-top: -25px;
+        text-align: center;
+        background-color: #E74C3C;
+       }
+       .section4 div:nth-last-of-type(3){
+        padding-top:30% ;
+        color: #ffffff;
+       
+        
+       }
+       .section4 div:nth-last-of-type(3) div {
+        width: 80%;
+       margin: 0 auto;
+       }
+       .section4 div:nth-last-of-type(3) div h2{
+        font-size: 20px;
+        font-weight: 700;
+       }
+       .section4 div:nth-last-of-type(3) div p{
+        font-size: 16px;
+       }
+       .section5 {
+        background-color: black;
+        margin-top: -25px;
+        color: white;
+        padding: 50px 0px;
+        width: 100%;
+       }
+       .section5 div h2{
+        font-size: 24px;
+        font-weight: 700;
+       }
+       .section5 p {
+        font-size: 18px;
+        font-weight: 500;
+       }
+       .section5 div:first-child h1,.section5 div:first-child p{
+        text-align: center;
+       }
+       .section5 div:first-child p {
+        display: none;
+       }
+       .section5 div:first-child h1 span{
+        color: #E74C3C;
+       }
+       .section5 div:nth-of-type(2) img{
+         width: 100%;
+         margin: 0 auto;
+       }
+
+       .section5 div{
+        width: 90%;
+        margin: 60px auto;
+       }
+       .section6 {
+        width: 100%;
+        margin-top: -25px;
+       }
+       .section6 img {
+        width: 250px;
+       }
+       .section6 div {
+        background-color: #fff1ef;
+        padding: 50px 50px;
+        text-align: center;
+        padding-bottom: 0;
+       }
+       .section6 button {
+        padding: 10px 20px;
+        background-color: #E74C3C;
+        border-radius: 5px;
+        border: none;
+        color: #ffffff;
+       }
+       .section6 div:last-child{
+        margin-top: 10px;
+       }
+       .section6 div:last-child button{
+        margin-bottom: 30px;
+       }
+       .section7 {
+        width: 100%;
+        margin-top: 50px;
+       }
+       .section7 h1 {
+        text-align: center;
+       }
+       .section7 h1 span {
+        color: #E74C3C;
+       }
+       .section7 div{
+        width: 100%;
+        background-color: #fff1ef;
+        text-align: center;
+        padding: 10px 0px;
+       }
+       .section7 img{
+        width: 100%;
+       }
+       .section8 {
+        width: 100%;
+        margin-top: 20px;
+        background-color: rgb(0, 0, 27);
+        color: white;
+        padding-top: 30px;
+       }
+       .section8 img {
+        width: 300px;
+       }
+       .section8 h1 {
+        text-align: center;
+       }
+       .section8 article{
+        width: 90%;
+        margin: 0 auto;
+       }
+       .section8 article div {
+        margin: 30px 0px;
+       }
+       .section8 article #drop {
+          position: relative;
+          display: inline-block;
+          font-size: 20px;
+          font-weight: bolder;
+       }
+       .section8 article #drop .drop-content{
+        display: none;
+        line-height: 25px;
+        font-size: 16px;
+       }
+       /*.section8 article #drop:hover .drop-content{
+        display: block;
+       }
+       */
+       .section9 {
+        width: 100%;
+        background-color: #E74C3C;
+        margin-top: -30px;
+        padding: 30px 0px;
+       }
+       .section9 img {
+        width: 90%;
+       }
+       .section9 div {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+       }
+       .section9 a{
+        display: inline-block;
+        margin: 10px;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        width: 150px;
+        padding: 1px;
+        border-radius: 10px;
+       }
+       .section9 div:last-child {
+        margin-top:50px ;
+       }
+       .section9 div:last-child img:last-child{
+        display: none;
+       }
+       footer {
+        width: 100%;
+        background-color: black;
+        margin-bottom:-20px;
+        display: flex;
+        flex-direction: column;
+        color: white;
+       }
+       footer div:first-child {
+        margin-left: 20px;
+       }
+       footer div:first-child img {
+        width: 20px;
+        margin: 30px 10px 0px 10px;
+       }
+       footer div:last-child {
+        align-self: center;
+        margin-top: 20px;
        }
     </style>
 </head>
@@ -125,19 +410,21 @@
             </button>
         </div>
         <div class="section1-imgs">
-            <img src="images/Frame 1624.png" alt="" width="300px">
+            <img src="images/Frame 1624.png" alt="">
             <img src="images/Frame 1626.png" alt="">
             <img src="images/Frame 1625.png" alt="">
         </div>
     </section>
     <section class="section2">
-        <div><p>Money back Guarante</p></div>
+        <article>
+        <div><p>Money back <br>Guarante</p></div>
         <div><p>
-            256-bit secure payment
+            256-bit secure <br> payment
         </p></div>
         <div>
-            256-bit secure payment
+            256-bit secure <br> payment
         </div>
+        </article>
     </section>
     <section class="section3">
         <h1>Top Categories</h1>
@@ -153,7 +440,7 @@
         </article>
     </section>
     <section class="section4">
-        <div>
+        <div class="section4-content">
             <h2>Discover Your <span>Perfect Match!</span></h2>
             <p>
                 At ShopSmart, we've curated an extensive range 
@@ -165,16 +452,17 @@
             </p>
         </div>
         <div><img src="images/Frame 1622 (1).png" alt=""></div>
-        <div><h2>Books and Hobbies</h2>
+        <div><div><h2>Books and Hobbies</h2>
         <p>
             Feed your passion for reading and hobbies without breaking the bank.
             Explore a treasure  trove of used books, art supplies, collectibles, and more.
-        </p></div>
+        </p>
+         </div></div>
         <div><img src="images/Frame 1620.png" alt=""></div>
         <div><img src="images/Frame 1621.png" alt=""></div>
     </section>
     <section class="section5">
-        <div><h1>How the Momarkt Mobile App Works.</h1>
+        <div><h1>How the <span>Momarkt Mobile App Works.</span></h1>
         <p>Explore the Magic of Our App</p></div>
         <div><img src="images/iPhone 14 Pro Space Black Mockup.png" alt=""></div>
         <div><h2>Browse Extensive Collections</h2>
@@ -210,7 +498,7 @@
             <p>Discover a world of incredible deals and hidden gems,
                 curated just for you. As a buyer on our platform, you can explore
                  a vast collection of pre-owned products.</p>
-            <button>Become a buyer</button>
+            <button>Become a buyer</button> <br>
             <img src="images/Happy woman with shopping bags.png" alt="">
         </div>
         <div>
@@ -219,12 +507,12 @@
                 your pre-owned items for sale and reach a wide audience 
                 of eager buyers. Whatever it's,
                  there's a place for everything on our platform.</p>
-                 <button>List your product</button>
+                 <button>List your product</button> <br>
                  <img src="images/fast food worker.png" alt="">
         </div>
     </section>
-    <section class="section6">
-        <h1>Use <span>reviews</span>and testmonials</h1>
+    <section class="section7">
+        <h1>Use reviews and <span>testmonials </span></h1>
         <div>
             <p>Verified Buyer</p>
             <p>John Doe</p>
@@ -252,44 +540,44 @@
                  they know exactly what I'm looking for.”</p>
         </div>
     </section>
-    <section class="section7">
+    <section class="section8">
         <article>
             <h1>Frequently Asked Questions</h1>
-            <div>
-                <span>Are the used productss in good condition and reliable?</span>
+            <div id="drop" >
+                <span onclick="displayam()">Are the used productss in good condition and reliable?</span>
                 <div class="drop-content">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam repellendus quae sequi vero ex, nemo eum officia. Esse, sunt voluptatum? Modi obcaecati distinctio inventore officia quisquam molestias earum illum.
                     Quos, labore tempora. Modi cupiditate quasi magnam odio assumenda sint debitis consequuntur hic, odit voluptate fuga vero. Commodi ullam, cumque dolor, harum sed delectus, perspiciatis voluptatem esse dolorum aspernatur velit?
                     Consequuntur nesciunt ea quam ex molestiae non tenetur quibusdam dolorem molestias odit optio reprehenderit beatae officiis reiciendis soluta veniam fuga sunt rem earum aut, accusantium assumenda adipisci! Dicta, voluptatum inventore.
                 </div>
             </div>
-            <div>
-                <span>How secure aare the transactions on your website?</span>
-                <div class="drop-content">
+            <div id="drop" >
+                <span onclick="displayam0()">How secure aare the transactions on your website?</span>
+                <div class="drop-content drop0">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam repellendus quae sequi vero ex, nemo eum officia. Esse, sunt voluptatum? Modi obcaecati distinctio inventore officia quisquam molestias earum illum.
                     Quos, labore tempora. Modi cupiditate quasi magnam odio assumenda sint debitis consequuntur hic, odit voluptate fuga vero. Commodi ullam, cumque dolor, harum sed delectus, perspiciatis voluptatem esse dolorum aspernatur velit?
                     Consequuntur nesciunt ea quam ex molestiae non tenetur quibusdam dolorem molestias odit optio reprehenderit beatae officiis reiciendis soluta veniam fuga sunt rem earum aut, accusantium assumenda adipisci! Dicta, voluptatum inventore.
                 </div>
             </div>
-            <div>
-                <span>What if i recieve a product that doesn't meet my expectations ?</span>
-                <div class="drop-content">
+            <div id="drop" >
+                <span onclick="displayam1()">What if i recieve a product that doesn't meet my expectations ?</span>
+                <div class="drop-content drop1">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam repellendus quae sequi vero ex, nemo eum officia. Esse, sunt voluptatum? Modi obcaecati distinctio inventore officia quisquam molestias earum illum.
                     Quos, labore tempora. Modi cupiditate quasi magnam odio assumenda sint debitis consequuntur hic, odit voluptate fuga vero. Commodi ullam, cumque dolor, harum sed delectus, perspiciatis voluptatem esse dolorum aspernatur velit?
                     Consequuntur nesciunt ea quam ex molestiae non tenetur quibusdam dolorem molestias odit optio reprehenderit beatae officiis reiciendis soluta veniam fuga sunt rem earum aut, accusantium assumenda adipisci! Dicta, voluptatum inventore.
                 </div>
             </div>
-            <div>
-                <span>Can i trust the seller on your platform?</span>
-                <div class="drop-content">
+            <div id="drop" >
+                <span onclick="displayam2()">Can i trust the seller on your platform?</span>
+                <div class="drop-content drop2">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam repellendus quae sequi vero ex, nemo eum officia. Esse, sunt voluptatum? Modi obcaecati distinctio inventore officia quisquam molestias earum illum.
                     Quos, labore tempora. Modi cupiditate quasi magnam odio assumenda sint debitis consequuntur hic, odit voluptate fuga vero. Commodi ullam, cumque dolor, harum sed delectus, perspiciatis voluptatem esse dolorum aspernatur velit?
                     Consequuntur nesciunt ea quam ex molestiae non tenetur quibusdam dolorem molestias odit optio reprehenderit beatae officiis reiciendis soluta veniam fuga sunt rem earum aut, accusantium assumenda adipisci! Dicta, voluptatum inventore.
                 </div>
             </div>
-            <div>
-                <span>How do i sell my used items on your website?</span>
-                <div class="drop-content">
+            <div id="drop" >
+                <span onclick="displayam3()">How do i sell my used items on your website?</span>
+                <div class="drop-content drop3" >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam repellendus quae sequi vero ex, nemo eum officia. Esse, sunt voluptatum? Modi obcaecati distinctio inventore officia quisquam molestias earum illum.
                     Quos, labore tempora. Modi cupiditate quasi magnam odio assumenda sint debitis consequuntur hic, odit voluptate fuga vero. Commodi ullam, cumque dolor, harum sed delectus, perspiciatis voluptatem esse dolorum aspernatur velit?
                     Consequuntur nesciunt ea quam ex molestiae non tenetur quibusdam dolorem molestias odit optio reprehenderit beatae officiis reiciendis soluta veniam fuga sunt rem earum aut, accusantium assumenda adipisci! Dicta, voluptatum inventore.
@@ -299,8 +587,30 @@
         <article>
             <div><img src="images/Busnesswoman thinking about work with questions hanging over her head.png" alt=""></div>
         </article>
+        <script>
+            let displayit = document.querySelector(".drop-content")
+            let displayit0 = document.querySelector(".drop0")
+            let displayit1 = document.querySelector(".drop1")
+            let displayit2 = document.querySelector(".drop2")
+            let displayit3 = document.querySelector(".drop3")
+            function displayam(){
+                displayit.style.display="block"
+            }
+            function displayam0(){
+                displayit0.style.display="block"
+            }
+            function displayam1(){
+                displayit1.style.display="block"
+            }
+            function displayam2(){
+                displayit2.style.display="block"
+            }
+            function displayam3(){
+                displayit3.style.display="block"
+            }
+        </script>
     </section>
-    <section class="section8">
+    <section class="section9">
         <div>
             <h1>Download our App on Android and iOS</h1>
             <p>

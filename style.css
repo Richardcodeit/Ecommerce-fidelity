@@ -1,0 +1,29 @@
+function closeit(){
+    closeam.style.display="none"
+    nave.style.display="none"
+    openam.style.display="block"
+   }
+
+   section 4 html
+   /* <div class="section4-content" data-aos="fade-up">
+        <div> <h2>Discover Your <span>Perfect Match!</span></h2>
+            <p>
+                At ShopSmart, we've curated an extensive range 
+                of categories to cater to every shopper's unique
+                 preferences and interests. Whether you're on the hunt
+                  for electronics, fashion, home decor, or more, our
+                 thoughtfully organized categories 
+                make finding your dream items a breeze.
+            </p>
+        </div>
+        </div>
+        <div data-aos="fade-up"><img src="images/Frame 1622 (1).png" alt=""></div>
+        <div data-aos="fade-up"><div><h2>Books and Hobbies</h2>
+        <p>
+            Feed your passion for reading and hobbies without breaking the bank.
+            Explore a treasure  trove of used books, art supplies, collectibles, and more.
+        </p>
+         </div></div>
+        <div data-aos="fade-up"><img src="images/Frame 1620.png" alt=""></div>
+        <div data-aos="fade-up"><img src="images/Frame 1621.png" alt=""></div>
+        */

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Document</title>
     <style>
        svg {
@@ -12,10 +14,15 @@
        img {
        width: 100px;
        }
+       html {
+        padding: 0;
+        margin: 0;
+       }
        body{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        width: 100%;
        }
        p{
         font-size: 16px;
@@ -27,6 +34,7 @@
         width: 100%;
         height: 70px;
         position: fixed;
+        z-index: 3;
         inset: 0;
         display: flex;
         justify-content: space-between;
@@ -49,8 +57,28 @@
          background-color: whitesmoke;
          padding: 20px;
        }
+       header ul.hidden{
+        display: block;
+       }
+       header ul.active{
+        display: block;
+       }
        header .dis{
         display: none;
+       }
+       header .dis.hidden {
+        display: none;
+       }
+       header .dis.active{
+        display: block;
+        transition: display s linear;
+       }
+       header .dis1.active{
+        display: none;
+        transition: display 2s linear;
+       }
+       header .dis1.hidden{
+        display: block;
        }
        .section1 {
         margin-top: 110px;
@@ -111,7 +139,7 @@
         margin-top: 20px;
         background-color: #E74C3C;
         color:#ffffff;
-      
+       
        }
        .section2 article{
         width: 90%;
@@ -135,77 +163,70 @@
         text-align: center;
        }
        .section3 article{
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         display: grid;
-        gap: 10px;
-        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        
        }
-       .section3 article div {
+       .section3 article .dive{
+        display: grid;
+        
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+       }
+       .section3 article .dive .boxes {
         background-color: #F0F0F0;
-        width: 50%;
-        height: 38px;
+        width: 120px;
+        font-size: 12px;
         border-radius: 10px;
         text-align: center;
-        padding: 10px 25px;
+        padding: 15px 20px;
        }
-       .section4 {
-        margin-top: 90px;
-       }
-       .section4 img {
-        width: 50vh;
+     .section4 {
+        width: 100%;
+        margin: 50px 0px;
+        padding: 0;
+     }
+     .section4 article {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+     }
+     .section4 article div {
+        margin-top: -4px;
+     }
+     .section4 article div img{
+        width: 100%;
+        height: 600px;
         object-fit: cover;
-       }
-       .section4 .section4-content{
+     }
+     .section4 article div:first-child div{
         width: 90%;
         margin: 0 auto;
         text-align: center;
-       }
-       .section4 .section4-content h2{
-        font-size: 24px;
-       }
-       .section4 .section4-content p {
-        font-size: 16px;
-        width: 95%;
-        text-align: center;
-        margin: 40px auto;
-       }
-       .section4 .section4-content span{
-        color: #E74C3C;
-       }
-       .section4 div:nth-last-of-type(2), .section4 div:nth-last-of-type(3), .section4 div:nth-last-of-type(4), .section4 div:nth-last-of-type(5){
-        width: 100%;
-        margin: -10px 0px;
-       }
-       .section4 :nth-last-of-type(3) {
-        height: 300px;
-        margin-top: -25px;
-        text-align: center;
+        padding: 50px 0px;
+     }
+     .section4 article div:nth-child(3) {
         background-color: #E74C3C;
-       }
-       .section4 div:nth-last-of-type(3){
-        padding-top:30% ;
-        color: #ffffff;
-       
-        
-       }
-       .section4 div:nth-last-of-type(3) div {
-        width: 80%;
+     }
+     .section4 article div:nth-child(3) div{
+       width: 80%;
        margin: 0 auto;
-       }
-       .section4 div:nth-last-of-type(3) div h2{
-        font-size: 20px;
-        font-weight: 700;
-       }
-       .section4 div:nth-last-of-type(3) div p{
-        font-size: 16px;
-       }
+       text-align: center;
+       padding: 100px 0px;
+       color: white;
+    }
+    .section4 article div:last-child {
+        display: none;
+    }
        .section5 {
         background-color: black;
-        margin-top: -25px;
         color: white;
         padding: 50px 0px;
         width: 100%;
+        margin-top: -4px;
        }
        .section5 div h2{
         font-size: 24px;
@@ -225,10 +246,11 @@
         color: #E74C3C;
        }
        .section5 div:nth-of-type(2) img{
-         width: 100%;
-         margin: 0 auto;
+         width: 300px;
        }
-
+       .section5 div:nth-of-type(2) {
+        text-align: center;
+       }
        .section5 div{
         width: 90%;
         margin: 60px auto;
@@ -274,6 +296,16 @@
         background-color: #fff1ef;
         text-align: center;
         padding: 10px 0px;
+       }
+       .section7 div P:first-child{
+        padding: 30px;
+       }
+       .section7 div p:last-child{
+        width: 80%;
+        margin: 20px auto;
+       }
+       .section7 div:last-child {
+        display: none;
        }
        .section7 img{
         width: 100%;
@@ -362,6 +394,53 @@
         align-self: center;
         margin-top: 20px;
        }
+       @media screen and (min-width:790px) {
+        body{
+            background-color: ed;
+        }
+        .section1-imgs {
+            width: 90%;
+            margin: 50px auto;
+        }
+        .section4{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         margin-bottom: 20px;
+         width: 100%;
+        }
+        .section4 .section4-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 30%;
+        }
+        .section4 .section4-content p {
+            margin: 0 auto;
+        }
+        .section4 :nth-last-of-type(3) {
+            padding: 0;
+            display: grid;
+            place-items: center;
+        }
+        .section7 article{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         width: 100%;
+        }
+        .section7 div img{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .section7 div {
+            margin: 20px 0px;
+            padding: 0;
+        }
+        .section7 div:nth-child(1){
+            
+        }
+       }
     </style>
 </head>
 <body>
@@ -370,32 +449,37 @@
         <img src="images/Group 4.png" alt="" width="100%">
         </div>
         <div>
-          <svg onclick="closeit()" xmlns="http://www.w3.org/2000/svg" class="dis" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-          </svg>
+            <sg xmlns="http://www.w3.org/2000/svg"  onclick="openit()" class="dis2 " width="16" height="16" fill="currentColor" class="bi bi-filter-right" viewBox="0 0 16 16">
+                <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z"/>
+              </svg>
         </div>
         <nav class="nav">
           <div class="ul">
-            <svg xmlns="http://www.w3.org/2000/svg"  onclick="openit()" class="dis2 " width="16" height="16" fill="currentColor" class="bi bi-filter-right" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg"  onclick="openit()" class="dis1" width="16" height="16" fill="currentColor" class="bi bi-filter-right" viewBox="0 0 16 16">
                 <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z"/>
               </svg>
-              
-              <ul id="ul">
+              <svg onclick="closeit()" xmlns="http://www.w3.org/2000/svg" class="dis" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+              <ul id="ul" class="hide">
             <li>SIGN UP</li>
             <li>LOGIN</li>
           </ul>
           </div>
         </nav>
-        <script>
-            let openam = document.querySelector(".dis2")
-            let closeam = document.querySelector(".dis")
-            let nava = document.querySelector("#ul")
-            function openit(){
-              openam.style.display="none" 
-              nava.style.display="block"
-              closeam.style.display="block"
-            }
-        </script>
+    <script>
+        let openam =document.querySelector(".dis1") 
+        let closeam =document.querySelector(".dis")
+        let nave = document.querySelector("#ul")
+        openam.onclick = function(){
+            nave.classList.toggle('active')
+            openam.classList.toggle('active')
+            closeam.classList.toggle('active')
+        }
+        closeam.onclick = function(){
+          
+        }
+    </script>
     </header>
     <section class="section1">
         <div class="section1-content">
@@ -429,48 +513,64 @@
     <section class="section3">
         <h1>Top Categories</h1>
         <article>
-            <div>Phone and Tablets</div>
-            <div>Property</div>
-            <div>Vehicles</div>
-            <div>Furniture</div>
-            <div>Electronics</div>
-            <div>Fashion</div>
-            <div>Food</div>
-            <div> Animal and Pet</div>
+            <div class="dive">
+            <div class="boxes" data-aos="fade-up">Phone and Tablets</div>
+            <div class="boxes" data-aos="fade-up">Property</div>
+            <div class="boxes" data-aos="fade-up">Vehicles</div>
+            <div class="boxes" data-aos="fade-up">Furniture</div>
+            <div class="boxes" data-aos="fade-down">Electronics</div>
+            <div class="boxes" data-aos="fade-down">Fashion</div>
+            <div class="boxes" data-aos="fade-down">Food</div>
+            <div class="boxes" data-aos="fade-down"> Animal and Pet</div>
+            </div>
         </article>
     </section>
     <section class="section4">
-        <div class="section4-content">
-            <h2>Discover Your <span>Perfect Match!</span></h2>
-            <p>
-                At ShopSmart, we've curated an extensive range 
-                of categories to cater to every shopper's unique
-                 preferences and interests. Whether you're on the hunt
-                  for electronics, fashion, home decor, or more, our
-                 thoughtfully organized categories 
-                make finding your dream items a breeze.
-            </p>
+        <article>
+            <div>
+                <div> <h2>Discover Your <span>Perfect Match!</span></h2>
+                <p>
+                    At ShopSmart, we've curated an extensive range 
+                    of categories to cater to every shopper's unique
+                     preferences and interests. Whether you're on the hunt
+                      for electronics, fashion, home decor, or more, our
+                     thoughtfully organized categories 
+                    make finding your dream items a breeze.
+                </p>
+            </div>
         </div>
-        <div><img src="images/Frame 1622 (1).png" alt=""></div>
-        <div><div><h2>Books and Hobbies</h2>
+        <div>
+            <img src="images/Frame 1622 (1).png" alt="">
+        </div>
+        <div>
+            <div><h2>Books and Hobbies</h2>
         <p>
             Feed your passion for reading and hobbies without breaking the bank.
             Explore a treasure  trove of used books, art supplies, collectibles, and more.
         </p>
-         </div></div>
-        <div><img src="images/Frame 1620.png" alt=""></div>
-        <div><img src="images/Frame 1621.png" alt=""></div>
+         </div>
+        </div>
+        <div>
+            <img src="images/Frame 1620.png" alt="">
+        </div>
+        <div>
+            <img src="images/Frame 1621.png" alt="">
+        </div>
+        <div>
+            <img src="images/Frame 1616.png" alt="">
+        </div>
+     </article>
     </section>
     <section class="section5">
-        <div><h1>How the <span>Momarkt Mobile App Works.</span></h1>
+        <div data-aos="fade-up-right"><h1>How the <span>Momarkt Mobile App Works.</span></h1>
         <p>Explore the Magic of Our App</p></div>
-        <div><img src="images/iPhone 14 Pro Space Black Mockup.png" alt=""></div>
-        <div><h2>Browse Extensive Collections</h2>
+        <div data-aos="fade-up-left"><img src="images/iPhone 14 Pro Space Black Mockup.png" alt=""></div>
+        <div data-aos="zoom-out-up"><h2>Browse Extensive Collections</h2>
         <p>Our app boasts an extensive collection of used products
              ranging from electronics and fashion to home decor and more.
             Easily navigate through diverse categories, 
             making your search effortless and enjoyable.</p></div>
-            <div>
+            <div data-aos="zoom-out">
                 <h2>Smart Recommendations Engine</h2>
                 <p>
                     Through advanced machine learning, the app learns your
@@ -478,14 +578,14 @@
                     ensuring each discovery feels tailor-made just for you.
                 </p>
             </div>
-            <div><h2>Trustworthy Seller Ratings and Reviews</h2>
+            <div data-aos="zoom-out-up"><h2>Trustworthy Seller Ratings and Reviews</h2>
             <p>
                 Our community-driven rating and review system allows you
                  to assess sellers' reputations, so you can buy with confidence.
                   Make informed decisions 
                 based on authentic feedback from fellow shoppers.
             </p></div>
-            <div><h2>Instant Chat Support</h2>
+            <div data-aos="zoom-out"><h2>Instant Chat Support</h2>
             <p>
                 Our in-app chat feature lets you reach out for 
                 quick answers to your queries, ensuring your shopping experien
@@ -502,7 +602,7 @@
             <img src="images/Happy woman with shopping bags.png" alt="">
         </div>
         <div>
-            <h3>sellers</h3>
+            <h3>Sellers</h3>
             <p>As a seller on ShopSmart, you can effortlessly list 
                 your pre-owned items for sale and reach a wide audience 
                 of eager buyers. Whatever it's,
@@ -513,7 +613,8 @@
     </section>
     <section class="section7">
         <h1>Use reviews and <span>testmonials </span></h1>
-        <div>
+        <article>
+        <div data-aos="fade-up-right">
             <p>Verified Buyer</p>
             <p>John Doe</p>
             <p>“I've been using ShopSmart for a few months now, 
@@ -521,8 +622,8 @@
                 recommendations are spot on, and it feels
                  like they know exactly what I'm looking for.”</p>
         </div>
-        <div><img src="images/Frame 1617.png" alt=""></div>
-        <div>
+        <div data-aos="fade-up-left"><img src="images/Frame 1617.png" alt=""></div>
+        <div data-aos="fade-up-right">
             <p>Verified Buyer</p>
             <p>John Doe</p>
             <p>“I've been using ShopSmart for a few months now,
@@ -530,8 +631,8 @@
                   recommendations are spot on, and it feels like
                  they know exactly what I'm looking for.”</p>
         </div>
-        <div><img src="images/Frame 1625 (1).png" alt=""></div>
-        <div>
+        <div data-aos="fade-up-left"><img src="images/Frame 1625 (1).png" alt=""></div>
+        <div data-aos="fade-up-right">
             <p>Verified Buyer</p>
             <p>John Doe</p>
             <p>“I've been using ShopSmart for a few months now,
@@ -539,6 +640,7 @@
                   recommendations are spot on, and it feels like
                  they know exactly what I'm looking for.”</p>
         </div>
+        </article>
     </section>
     <section class="section8">
         <article>
@@ -637,6 +739,9 @@
             <p>All Rights Reserved 2023</p>
         </div>
     </footer>
+    <script>
+        AOS.init({duration:1000})
+    </script>
 </body>
 
 </html>

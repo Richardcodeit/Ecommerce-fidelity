@@ -5,481 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <style>
-       svg {
-        width: 30px;
-        height: 50px;
-       }
-       img {
-       width: 100px;
-       }
-       html {
-        padding: 0;
-        margin: 0;
-       }
-       body{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        width: 100%;
-       }
-       p{
-        font-size: 16px;
-       }
-       h1 ,h2 ,h3{
-        font-size: 24px;
-       }
-       header{
-        width: 100%;
-        height: 70px;
-        position: fixed;
-        z-index: 3;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: space-between;
-        background-color: #FDFDFDE5;
-        padding: 10px 0px;
-        
-       }
-       header .img-div{
-        width: 100px;
-        margin-top: 10px;
-        margin-left: 10px;
-       }
-       header .dis2 {
-        justify-self: flex-end;
-        margin-right: 10px;
-       } 
-       header ul {
-        list-style-type: none;
-        display: none;
-         background-color: whitesmoke;
-         padding: 20px;
-       }
-       header ul.hidden{
-        display: block;
-       }
-       header ul.active{
-        display: block;
-       }
-       header .dis{
-        display: none;
-       }
-       header .dis.hidden {
-        display: none;
-       }
-       header .dis.active{
-        display: block;
-        transition: display s linear;
-       }
-       header .dis1.active{
-        display: none;
-        transition: display 2s linear;
-       }
-       header .dis1.hidden{
-        display: block;
-       }
-       .section1 {
-        margin-top: 110px;
-        width: 100%;
-       }
-       .section1 .section1-content {
-        width: 90%;
-        margin: 0 auto;
-       }
-       .section1-content h2 {
-        font-size: 24px;
-        line-height: 36px;
-        font-weight: 700;
-       }
-       .section1-content h2 span{
-        color: #E74C3C;
-       }
-       .section1-content p {
-        font-size: 16px;
-        line-height: 24px;
-        font-size: 700;
-        color: #4E4949;
-       }
-       .section1-content button {
-        padding: 10px 20px;
-        border-radius: 5px;
-        color:#ffffff ;
-        background-color: #E74C3C;
-        font-size: 16px;
-        font-weight: 500;
-       }
-       .section1-imgs {
-        margin-top: 70px;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-        grid-template-rows:1fr;
-        gap: 10px;
-    }
-       .section1-imgs img:first-child {
-        width: 100%;
-        object-fit: cover;
-        margin-top: 50px;
-        height: 265px;
-        align-self: center;
-       }
-       .section1-imgs img:nth-of-type(2),.section1-imgs img:last-child{
-        width: 100%;
-        object-fit: cover;
-        height: 186px;
-       }
-       .section1-imgs img:last-child{
-        grid-column: 2 / -1;
-        margin-top: -130px;
-       }
-       .section2 {
-        width: 100%;
-        margin-top: 20px;
-        background-color: #E74C3C;
-        color:#ffffff;
-       
-       }
-       .section2 article{
-        width: 90%;
-        height: 150px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-evenly;
-       }
-       .section2 article div:nth-of-type(3){
-           margin-top: 15px;
-       }
-       .section2 article div:nth-of-type(2){
-          align-self: flex-end;        
-       }
-       .section3{
-        margin-top: 70px;
-        width: 100%;
-        text-align: center;
-       }
-       .section3 h1 {
-        text-align: center;
-       }
-       .section3 article{
-        width: 100%;
-        margin: 0 auto;
-        display: grid;
-        place-items: center;
-        
-       }
-       .section3 article .dive{
-        display: grid;
-        
-        justify-content: space-between;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-       }
-       .section3 article .dive .boxes {
-        background-color: #F0F0F0;
-        width: 120px;
-        font-size: 12px;
-        border-radius: 10px;
-        text-align: center;
-        padding: 15px 20px;
-       }
-     .section4 {
-        width: 100%;
-        margin: 50px 0px;
-        padding: 0;
-     }
-     .section4 article {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-     }
-     .section4 article div {
-        margin-top: -4px;
-     }
-     .section4 article div img{
-        width: 100%;
-        height: 600px;
-        object-fit: cover;
-     }
-     .section4 article div:first-child div{
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-        padding: 50px 0px;
-     }
-     .section4 article div:nth-child(3) {
-        background-color: #E74C3C;
-     }
-     .section4 article div:nth-child(3) div{
-       width: 80%;
-       margin: 0 auto;
-       text-align: center;
-       padding: 100px 0px;
-       color: white;
-    }
-    .section4 article div:last-child {
-        display: none;
-    }
-       .section5 {
-        background-color: black;
-        color: white;
-        padding: 50px 0px;
-        width: 100%;
-        margin-top: -4px;
-       }
-       .section5 div h2{
-        font-size: 24px;
-        font-weight: 700;
-       }
-       .section5 p {
-        font-size: 18px;
-        font-weight: 500;
-       }
-       .section5 div:first-child h1,.section5 div:first-child p{
-        text-align: center;
-       }
-       .section5 div:first-child p {
-        display: none;
-       }
-       .section5 div:first-child h1 span{
-        color: #E74C3C;
-       }
-       .section5 div:nth-of-type(2) img{
-         width: 300px;
-       }
-       .section5 div:nth-of-type(2) {
-        text-align: center;
-       }
-       .section5 div{
-        width: 90%;
-        margin: 60px auto;
-       }
-       .section6 {
-        width: 100%;
-        margin-top: -25px;
-       }
-       .section6 img {
-        width: 250px;
-       }
-       .section6 div {
-        background-color: #fff1ef;
-        padding: 50px 50px;
-        text-align: center;
-        padding-bottom: 0;
-       }
-       .section6 button {
-        padding: 10px 20px;
-        background-color: #E74C3C;
-        border-radius: 5px;
-        border: none;
-        color: #ffffff;
-       }
-       .section6 div:last-child{
-        margin-top: 10px;
-       }
-       .section6 div:last-child button{
-        margin-bottom: 30px;
-       }
-       .section7 {
-        width: 100%;
-        margin-top: 50px;
-       }
-       .section7 h1 {
-        text-align: center;
-       }
-       .section7 h1 span {
-        color: #E74C3C;
-       }
-       .section7 div{
-        width: 100%;
-        background-color: #fff1ef;
-        text-align: center;
-        padding: 10px 0px;
-       }
-       .section7 div P:first-child{
-        padding: 30px;
-       }
-       .section7 div p:last-child{
-        width: 80%;
-        margin: 20px auto;
-       }
-       .section7 div:last-child {
-        display: none;
-       }
-       .section7 img{
-        width: 100%;
-       }
-       .section8 {
-        width: 100%;
-        margin-top: 20px;
-        background-color: rgb(0, 0, 27);
-        color: white;
-        padding-top: 30px;
-       }
-       .section8 img {
-        width: 300px;
-       }
-       .section8 h1 {
-        text-align: center;
-       }
-       .section8 article{
-        width: 90%;
-        margin: 0 auto;
-       }
-       .section8 article div {
-        margin: 30px 0px;
-       }
-       .section8 article #drop {
-          position: relative;
-          display: inline-block;
-          font-size: 20px;
-          font-weight: bolder;
-       }
-       .section8 article #drop .drop-content{
-        display: none;
-        line-height: 25px;
-        font-size: 16px;
-       }
-       /*.section8 article #drop:hover .drop-content{
-        display: block;
-       }
-       */
-       .section9 {
-        width: 100%;
-        background-color: #E74C3C;
-        margin-top: -30px;
-        padding: 30px 0px;
-       }
-       .section9 img {
-        width: 90%;
-       }
-       .section9 div {
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-       }
-       .section9 a{
-        display: inline-block;
-        margin: 10px;
-        background-color: black;
-        color: white;
-        text-decoration: none;
-        width: 150px;
-        padding: 1px;
-        border-radius: 10px;
-       }
-       .section9 div:last-child {
-        margin-top:50px ;
-       }
-       .section9 div:last-child img:last-child{
-        display: none;
-       }
-       footer {
-        width: 100%;
-        background-color: black;
-        margin-bottom:-20px;
-        display: flex;
-        flex-direction: column;
-        color: white;
-       }
-       footer div:first-child {
-        margin-left: 20px;
-       }
-       footer div:first-child img {
-        width: 20px;
-        margin: 30px 10px 0px 10px;
-       }
-       footer div:last-child {
-        align-self: center;
-        margin-top: 20px;
-       }
-       @media screen and (min-width:790px) {
-        body{
-            background-color: ed;
-        }
-        .section1-imgs {
-            width: 90%;
-            margin: 50px auto;
-        }
-        .section4{
-         display: grid;
-         grid-template-columns: 1fr 1fr;
-         margin-bottom: 20px;
-         width: 100%;
-        }
-        .section4 .section4-content {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            padding-top: 30%;
-        }
-        .section4 .section4-content p {
-            margin: 0 auto;
-        }
-        .section4 :nth-last-of-type(3) {
-            padding: 0;
-            display: grid;
-            place-items: center;
-        }
-        .section7 article{
-         display: grid;
-         grid-template-columns: 1fr 1fr;
-         width: 100%;
-        }
-        .section7 div img{
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        .section7 div {
-            margin: 20px 0px;
-            padding: 0;
-        }
-        .section7 div:nth-child(1){
-            
-        }
-       }
-    </style>
 </head>
 <body>
     <header>
-        <div class="img-div">
-        <img src="images/Group 4.png" alt="" width="100%">
-        </div>
-        <div>
-            <sg xmlns="http://www.w3.org/2000/svg"  onclick="openit()" class="dis2 " width="16" height="16" fill="currentColor" class="bi bi-filter-right" viewBox="0 0 16 16">
-                <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z"/>
-              </svg>
-        </div>
-        <nav class="nav">
-          <div class="ul">
-            <svg xmlns="http://www.w3.org/2000/svg"  onclick="openit()" class="dis1" width="16" height="16" fill="currentColor" class="bi bi-filter-right" viewBox="0 0 16 16">
-                <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z"/>
-              </svg>
-              <svg onclick="closeit()" xmlns="http://www.w3.org/2000/svg" class="dis" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-              </svg>
-              <ul id="ul" class="hide">
-            <li>SIGN UP</li>
-            <li>LOGIN</li>
-          </ul>
-          </div>
-        </nav>
-    <script>
-        let openam =document.querySelector(".dis1") 
-        let closeam =document.querySelector(".dis")
-        let nave = document.querySelector("#ul")
-        openam.onclick = function(){
-            nave.classList.toggle('active')
-            openam.classList.toggle('active')
-            closeam.classList.toggle('active')
-        }
-        closeam.onclick = function(){
-          
-        }
+        lorem jgjgj jffi
+    </header>
+       
     </script>
     </header>
     <section class="section1">
@@ -523,6 +56,10 @@
             <div class="boxes" data-aos="fade-down">Fashion</div>
             <div class="boxes" data-aos="fade-down">Food</div>
             <div class="boxes" data-aos="fade-down"> Animal and Pet</div>
+            <div class="boxes boxes-hide" data-aos="fade-down">Electronics</div>
+            <div class="boxes boxes-hide" data-aos="fade-down">Fashion</div>
+            <div class="boxes boxes-hide" data-aos="fade-down">Food</div>
+            <div class="boxes boxes-hide" data-aos="fade-down"> Animal and Pet</div>
             </div>
         </article>
     </section>
@@ -563,9 +100,9 @@
      </article>
     </section>
     <section class="section5">
-        <div data-aos="fade-up-right"><h1>How the <span>Momarkt Mobile App Works.</span></h1>
+        <div data-aos="fade-up-right" style="grid-area: bos1;"><h1>How the <span>Momarkt Mobile App Works.</span></h1>
         <p>Explore the Magic of Our App</p></div>
-        <div data-aos="fade-up-left"><img src="images/iPhone 14 Pro Space Black Mockup.png" alt=""></div>
+        <div data-aos="fade-up-left" style="grid-area: bos2;"><img src="images/iPhone 14 Pro Space Black Mockup.png" alt=""></div>
         <div data-aos="zoom-out-up"><h2>Browse Extensive Collections</h2>
         <p>Our app boasts an extensive collection of used products
              ranging from electronics and fashion to home decor and more.
@@ -595,20 +132,24 @@
     </section>
     <section class="section6">
         <div>
+            <div>
             <h3>Buyers</h3>
             <p>Discover a world of incredible deals and hidden gems,
                 curated just for you. As a buyer on our platform, you can explore
                  a vast collection of pre-owned products.</p>
-            <button>Become a buyer</button> <br>
+            <button>Become a buyer</button> 
+            </div>
             <img src="images/Happy woman with shopping bags.png" alt="">
         </div>
         <div>
+            <div>
             <h3>Sellers</h3>
             <p>As a seller on ShopSmart, you can effortlessly list 
                 your pre-owned items for sale and reach a wide audience 
                 of eager buyers. Whatever it's,
                  there's a place for everything on our platform.</p>
-                 <button>List your product</button> <br>
+                 <button>List your product</button>
+            </div>
                  <img src="images/fast food worker.png" alt="">
         </div>
     </section>
@@ -644,8 +185,9 @@
         </article>
     </section>
     <section class="section8">
+        <h1>Frequently Asked Questions</h1>
+        <article class="flex-article">
         <article>
-            <h1>Frequently Asked Questions</h1>
             <div id="drop" >
                 <span onclick="displayam()">Are the used productss in good condition and reliable?</span>
                 <div class="drop-content">
@@ -690,6 +232,7 @@
         <article>
             <div><img src="images/Busnesswoman thinking about work with questions hanging over her head.png" alt=""></div>
         </article>
+        </article>
         <script>
             let displayit = document.querySelector(".drop-content")
             let displayit0 = document.querySelector(".drop0")
@@ -724,9 +267,9 @@
             <a href="#"><p>Download on the <br>
             App Store</p></a>
         </div>
-        <div>
+        <div class="last-div">
             <img src="images/Group 1.png" alt="">
-            <img src="images/Group 1 (1).png" alt="">
+            <img src="images/Group 1 (1).png" alt="" class="show-desktop">
         </div>
     </section>
     <footer>

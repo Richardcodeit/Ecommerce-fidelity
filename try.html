@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-areas: 
+        "top top"
+        "middle middle"
+        "bottom bottom";
+      grid-template-rows: 1fr 1fr 1fr; /* Equal distribution of space */
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      height: 400px;
+    }
+
+    .grid-item {
+      background-color: #3498db;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    .top-box {
+      grid-area: top;
+    }
+
+    .bottom-box {
+      grid-area: bottom;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item top-box">Top Box</div>
+    <!-- Middle row is equally distributed -->
+    <div class="grid-item"></div>
+    <div class="grid-item bottom-box">Bottom Box</div>
+  </div>
+</body>
+</html>
